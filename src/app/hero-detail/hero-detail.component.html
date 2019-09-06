@@ -1,0 +1,17 @@
+<div *ngIf="hero">
+    <h2>Detalles de {{ hero.name | uppercase }}</h2>
+    <!--hero.getNombre().toUpperCase()-->
+    <div><span>Id: </span>{{ hero.id }}</div>
+    <div>
+        <label>nombre:
+            <input [(ngModel)]="hero.name" placeholder="nombre" />
+            <!-- ngModel hace que los datos entre la propiedad hero.nombre de h2 y la caja fluyan bidireccionalmente-->
+            <!-- Sin esto, sólo sería una caja de texto normal -->
+        </label>
+    </div>
+</div>
+
+<!--
+    hero. es la propiedad declarada en la clase hero-detail.ts
+    esta se usa en el template de heroes.html
+-->

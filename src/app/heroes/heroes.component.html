@@ -1,0 +1,13 @@
+<h2>Mis Heroes</h2>
+<ul class="heroes">
+    <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+        <span class="badge">{{ hero.id }}</span>{{ hero.name }}
+    </li>
+</ul>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- 
+    Este código sustituye al de hero-detail.component.html 
+    el mismo que estaba hasta arriba de esta template.
+    Ahora es un componente separado de la lista de héroes.
+-->

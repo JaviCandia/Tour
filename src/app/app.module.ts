@@ -1,16 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {FormsModule} from '@angular/forms'; //aquí vive NgModel, en esta libreria 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
+  declarations: [ //Arreglo de declaración de módulos
+    AppComponent,
+    HeroesComponent,
+    HeroDetailComponent
   ],
-  imports: [
+  imports: [ //Arreglo de importaciones de metadatos, contiene una lista de modulos externos
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule //modulo "FormsModule" para NgModel
   ],
   providers: [],
   bootstrap: [AppComponent]
