@@ -3,13 +3,15 @@
     <!--hero.getNombre().toUpperCase()-->
     <div><span>Id: </span>{{ hero.id }}</div>
     <div>
-        <label>nombre:
+        <label>Nombre:
             <input [(ngModel)]="hero.name" placeholder="nombre" />
             <!-- ngModel hace que los datos entre la propiedad hero.nombre de h2 y la caja fluyan bidireccionalmente-->
             <!-- Sin esto, sólo sería una caja de texto normal -->
         </label>
     </div>
 </div>
+
+<button (click)="regresa()">Regresar</button> <!-- El método regresa() está en la clase .ts -->
 
 <!--
     hero. es la propiedad declarada en la clase hero-detail.ts

@@ -18,4 +18,9 @@ export class HeroService {
     this.messageService.add('Hero service: fetched heroes');
     return of(HEROES);
   }
+
+  getHero(id: number): Observable<Hero> {
+    this.messageService.add(`HeroService: fetched hero id=${id}`); //No son comillas normales
+    return of(HEROES.find(hero => hero.id === id));
+  } //usado en hero-detail.component.ts
 }

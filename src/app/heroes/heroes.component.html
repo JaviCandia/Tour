@@ -1,11 +1,14 @@
 <h2>Mis Heroes</h2>
 <ul class="heroes">
-    <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
-        <span class="badge">{{ hero.id }}</span>{{ hero.name }}
+    <li *ngFor="let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}">
+            <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </a>
     </li>
 </ul>
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+<!-- Se elimina, pero se va a arreglar después -->
 <!-- 
     Este código sustituye al de hero-detail.component.html 
     el mismo que estaba hasta arriba de esta template.
